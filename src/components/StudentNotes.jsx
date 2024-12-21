@@ -44,7 +44,10 @@ const StudentNotes = () => {
                                             : "failed"
                                     }
                                 >
-                                    {note.noteValue.toString().concat(" /20")}
+                                    {note.noteValue
+                                        .toString()
+                                        .replace(".", ",")
+                                        .concat(" /20")}
                                 </td>
                             </tr>
                         ))}
@@ -61,7 +64,9 @@ const StudentNotes = () => {
                     moyen == null ? "" : moyen >= 10 ? "passed" : "failed"
                 }
             >
-                Moyen: {moyen == null ? "-" : moyen} {" /20"}
+                Moyen:{" "}
+                {moyen == null ? "-" : moyen.toString().replace(".", ",")}{" "}
+                {" /20"}
             </div>
             <AddNoteButton studentId={id} />
         </div>
