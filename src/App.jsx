@@ -1,13 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import StudentsTable from "./components/StudentsTable";
-import AjouterEtudiant from "./components/AjouterEtudiant";
 import "./assets/css/App.css";
+import StudentNotes from "./components/StudentNotes";
 function App() {
     return (
-        <div>
-            <h1> Liste des &#233;tudiants</h1>
-            <StudentsTable />
-            <AjouterEtudiant />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<StudentsTable />} />
+                <Route path="/students/:id" element={<StudentNotes />} />
+            </Routes>
+        </Router>
     );
 }
 

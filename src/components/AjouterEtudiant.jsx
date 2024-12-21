@@ -32,7 +32,8 @@ const AjouterEtudiant = () => {
             if (response.ok) {
                 alert("Étudiant ajouté avec succès !");
                 setNomEtudiant(""); // Réinitialiser le champ
-                toggleDialog(); // Fermer le dialogue
+                toggleDialog();
+                // Fermer le dialogue
             } else {
                 alert("Erreur lors de l'ajout de l'étudiant !");
             }
