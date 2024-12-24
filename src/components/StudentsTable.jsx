@@ -5,7 +5,7 @@ import AjouterEtudiant from "./AjouterEtudiant";
 const StudentsTable = () => {
     const [students, setStudents] = useState([]);
     async function fetchStudents() {
-        const response = await fetch("http://localhost:8080/students");
+        const response = await fetch("http://my-backend-app:8080/students");
         const data = await response.json();
         setStudents(data);
         console.log(data);
