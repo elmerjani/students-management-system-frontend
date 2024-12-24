@@ -21,16 +21,13 @@ const AjouterEtudiant = () => {
 
         try {
             // Envoyer la donnée au backend
-            const response = await fetch(
-                "http://my-backend-app:8080/students",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ fullName: nomEtudiant }),
-                }
-            );
+            const response = await fetch("http://localhost:8080/students", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ fullName: nomEtudiant }),
+            });
 
             if (response.ok) {
                 alert("Étudiant ajouté avec succès !");

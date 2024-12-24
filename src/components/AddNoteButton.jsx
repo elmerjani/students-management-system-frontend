@@ -14,7 +14,7 @@ const AddNoteButton = ({ studentId }) => {
 
         try {
             const response = await fetch(
-                `http://my-backend-app:8080/students/${studentId}/notes`,
+                `http://localhost:8080/students/${studentId}/notes`,
                 {
                     method: "POST",
                     headers: {

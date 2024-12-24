@@ -16,7 +16,7 @@ const StudentNotes = () => {
             : null;
     useEffect(() => {
         // Fetch notes for the student with the given ID
-        fetch(`http://my-backend-app:8080/students/${id}/notes`)
+        fetch(`http://localhost:8080/students/${id}/notes`)
             .then((response) => response.json())
             .then((data) => setNotes(data))
             .catch((error) => console.error(error));
